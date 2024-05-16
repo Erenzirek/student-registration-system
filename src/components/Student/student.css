@@ -1,0 +1,98 @@
+body{
+    background-color:blueviolet;
+}
+
+.school-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.person-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('images/users.png');
+    background-size: cover; /* Resmi kaplamak için */
+    background-position: center; /* Resmi ortalamak için */
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.student-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Yatayda ortalamak için */
+    padding: 8px;
+    margin: 70px auto; /* Dikeyde ve yatayda ortalamak için */
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.Login-Button button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    transition: all ease-in-out 2s;
+}
+.Login-Button button:hover{
+    background-color: #8A2BE2;
+}
+
+.icon{
+    padding: 8px;
+}
+.input-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border: 2px solid whitesmoke;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-container input{
+    background-color: white;
+    width: 300px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 8px;
+    transition: all ease 2s;
+}
+
+.input-container input:hover{
+    border: 3px solid rgb(29, 146, 255);
+}
+
+.input-container input:focus {
+    border: 3px solid rgb(29, 146, 255);
+}
+.footer{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer span{
+    color: rgb(29, 146, 255);
+    font-weight: bold;
+}
+

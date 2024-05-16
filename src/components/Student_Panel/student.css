@@ -1,0 +1,199 @@
+body{
+    background-color: white;
+}
+
+.top-panel{
+    background-color: rgb(247, 247, 247);
+    border-radius: 18px;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 0px ;
+    right: 20px;
+    top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    transition: all ease-in-out 2s;
+}
+
+.top-panel:hover{
+    background-color: rgb(11, 235, 59);
+}
+
+.top-panel p{
+    padding: 8px;
+}
+
+.search-bar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.search-bar-container input{
+    background-color: white;
+    width: 500px;
+    height: 30px;
+    border-radius: 8px;
+    transition: all ease 2s;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+.search-bar-container input:hover{
+    border: 3px solid rgb(29, 146, 255);
+}
+
+.search-bar-container input:focus {
+    border: 3px solid rgb(29, 146, 255);
+}
+
+.navbar{
+    position: fixed;
+    width: 200px;
+    height: 700px;
+    left: 20px;
+    top: 20px;
+    background-color: rgb(149, 99, 227);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 18px;
+}
+
+.nav-list{
+    list-style-type: none; /* Remove bullet points */
+    position: fixed;
+    top: 200px;
+    padding: 0; /* Padding'i sıfırlayın */
+    margin: 8px;
+    left: 60px;
+}
+
+.nav-list li{
+    margin-bottom: 50px; /* Liste öğeleri arasında yatay boşluk */
+    display: flex; /* İçeriği yatay hizala */
+    align-items: center;
+}
+
+.nav-list a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
+
+.Person-Icon{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(56, 32, 95, 0.596);
+    border-radius: 50%; /* Doğru kullanım */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+    top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.welcome-panel-container{
+    width: 1000px;
+    height: 300px;
+    background-color: rgb(149, 99, 227);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border-radius: 18px;
+    border: 2px solid rgb(149, 99, 227);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 30px auto;
+    position: absolute;
+    left: 300px;
+
+}
+
+.date-panel{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    text-align: start;
+    display: flex;
+    
+}
+
+.welcome-message{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    text-align: start;
+    display: flex;
+}
+
+.welcome-back{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder
+}
+
+.bottom-sentence{
+    color: rgb(247, 247, 247,50%);
+    font-size: 15px;
+    position: absolute;
+    margin-top: -20px;
+}
+
+.course-panel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 800px;
+    height: 400px;
+    flex-wrap: wrap; /* Yeterli alan olmadığında elemanları bir sonraki satıra geçir */
+    margin-bottom: 20px;
+    margin: 200px auto;
+    margin-right: 150px;
+}
+
+.course-row {
+    display: flex; /* Satırı esnek hale getir */
+    justify-content: space-around; /* Elemanları yatayda eşit aralıklarla yerleştir */
+    width: 100%;
+    margin-bottom: 20px; /* Satırlar arası boşluk ver */
+}
+
+.course-box {
+    flex-basis: calc(50% - 20px); /* Esneklik ayarları - 2x2 grid oluşturmak için genişlik belirleme */
+    width: 100px; /* Genişliği ayarla */
+    height: 100px; /* Yüksekliği ayarla */
+    border: 2px solid #9563E3;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 10px; /* Boşluk ver */
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#box1{
+    background-color: rgba(2, 54, 97);
+}
+
+#box2{
+    background-color: rgb(255, 217, 3);
+}
+#box3{
+    background-color: rgb(72, 255, 0);
+}
+#box4{
+    background-color: rgb(0, 153, 255);
+}

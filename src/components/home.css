@@ -1,0 +1,59 @@
+body{
+    background-color:blueviolet;
+}
+
+.Welcome-Message{
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    margin: 100px auto;
+}
+.Home-Container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px auto;
+    justify-content: center;
+    text-align: center;
+}
+
+.Container-Box {
+    width: 300px;
+    height: 180px;
+    background-color: white;
+    margin-right: 40px; /* İki kutu arasında 20 piksel sağ boşluk */
+    border-radius: 18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 2px solid white;
+    padding: 12px;
+    transition: all ease 2s;
+}
+
+.Container-Box:hover {
+    background-color:rgb(87, 0, 228);
+    border: 2px solid rgb(87, 0, 228);
+}
+.SchoolIcon{
+    font-size: 35px;
+}
+
+.Container-Box h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.Container-Box p{
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    font-style: oblique;
+    padding: 8px;
+}
+
+
+.Container-Box:last-child {
+    margin-right: 0; /* Son kutuya boşluk eklenmez */
+}
