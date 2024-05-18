@@ -1,3 +1,22 @@
 body{
-    background-color: white;
+    background-color: blueviolet;
 }
+
+.sign-in-button{
+    margin-top: 25px;
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.input-label{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+

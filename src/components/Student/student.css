@@ -85,6 +85,7 @@ body{
     border: 3px solid rgb(29, 146, 255);
 }
 .footer{
+    margin-top: 8px;
     color: black;
     font-size: 15px;
     font-weight: bold;
@@ -96,3 +97,26 @@ body{
     font-weight: bold;
 }
 
+.error-message {
+    color: red; /* Hata mesajını kırmızı renkte yapar */
+    font-weight: bold; /* Metni kalın yapar */
+    background-color: #ffe6e6; /* Arka plan rengini hafif bir kırmızı tonuna ayarlar */
+    padding: 10px; /* Metnin etrafına biraz boşluk ekler */
+    border: 1px solid red; /* Kenarlık ekler */
+    border-radius: 5px; /* Kenar köşelerini yumuşatır */
+}
+
+.custom-size {
+    width: 300px; /* veya istediğiniz genişlik değeri */
+    height: 40px; /* veya istediğiniz yükseklik değeri */
+    padding: 8px;
+    margin-bottom: 8px;
+    /* Diğer stillendirme özellikleri */
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
