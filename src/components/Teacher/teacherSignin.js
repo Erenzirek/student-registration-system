@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './teacherLogin.css'
+
 function LoginForm() {
     // Kullanıcı adı ve şifre verileri
     const [username, setUsername] = useState('');
@@ -34,12 +34,7 @@ function LoginForm() {
 
     return (
         <div className="container">
-          <div className='symbol-container'> 
-            <div className='teacher-symbol'/>
-            <h2 className="display-4 title">Login Form </h2>
-          </div> 
-          
-
+            <h2 className="display-4 title">Login Form</h2>
             {loggedIn ? (
                 <div>
                     <p>Welcome, {username}!</p>
@@ -49,13 +44,13 @@ function LoginForm() {
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="username">Username:</label>
-                        <input type="text" className="form-control" id="username" value={username} placeholder = "User Name" onChange={(e) => setUsername(e.target.value)} required />
+                        <input type="text" className="form-control" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password:</label>
-                        <input type="password" className="form-control" id="password" value={password} placeholder = "Password" onChange={(e) => setPassword(e.target.value)} required />
+                        <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </div>
-                    <button type="submit" className="btn btn-primary Login-Button">Login</button>
+                    <button type="submit" className="btn btn-primary">Login</button>
                 </form>
             )}
         </div>

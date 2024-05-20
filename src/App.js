@@ -3,17 +3,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
 import RegisterStudent from './components/Student/RegisterStudent';
 import StudentLogin from './components/Student/StudentLogin';
-import Student_list from './components/Student/student_list';
+import StudentList from './components/Student/student_list'; // Corrected the component name
 import TeacherLogin from './components/Teacher/teacherLogin';
-import { useState } from 'react';
 import EditStudent from './components/Student/EditStudent';
 import StudentPanel from './components/Student_Panel/Student_Panel';
-import "./App.css"
-function App() {
+import TeacherList from './components/Teacher/TeacherList'; // Ensure this matches your component
+import TeacherSignin from './components/Teacher/teacherSignin';
+import TeacherPanel from './components/Teacher/TeacherPanel';
+import "./App.css";
 
+function App() {
   return (
-    // <StudentLogin/>
-    //<RegisterStudent/>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -22,9 +22,12 @@ function App() {
           <Route path='/StudentLogin' element={<StudentLogin />} />
           <Route path='/StudentPanel' element={<StudentPanel />} />
           <Route path='/EditStudent' element={<EditStudent />} />
-          <Route path='/Student_list' element={<Student_list />} />
+          <Route path='/StudentList' element={<StudentList />} /> {/* Corrected the path */}
           <Route path='/TeacherLogin' element={<TeacherLogin />} />
-          {/* <Route path='/register' element={<Register/>}></Route> */}
+          <Route path='/TeacherSignin' element={<TeacherSignin />} />
+          <Route path='/TeacherList' element={<TeacherList />} /> {/* Corrected the path */}
+          <Route path='/TeacherPanel' element={<TeacherPanel />} /> {/* Corrected the path */}
+
         </Routes>
       </BrowserRouter>
     </div>

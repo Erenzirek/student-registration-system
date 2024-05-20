@@ -46,8 +46,7 @@ function StudentPanel() {
        
         <div className="navbar">
             <ul className="nav-list">
-                
-                <li><div className="Person-Icon"><PersonIcon fontSize="large"/></div><a id="user-name">User Name</a></li>
+                    <li><div className="Person-Icon"><PersonIcon fontSize="large"/></div><a id="user-name">User Name</a></li>
                <div className="content">
                     <li><HomeTwoToneIcon/> <a href="#" className="active">Home</a></li> 
                     <li><GradingIcon/><a href="#">Grades</a></li>

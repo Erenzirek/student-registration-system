@@ -4,3 +4,30 @@
   .btn-edit{
     background-color: yellowgreen;
   }
+
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 18px;
+  width: 1000px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container .table{
+  background-color: blueviolet;
+}
+
+/* Arama kutusu için stiller */
+.search-input {
+  width: 900px;
+  padding: 8px;
+  margin: 20px;
+  border-radius: 18px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border: 2px solid white;
+}

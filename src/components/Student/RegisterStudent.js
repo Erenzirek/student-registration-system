@@ -39,7 +39,7 @@ const RegisterStudent = () => {
     }, [student.email]); // Dependency array'de student.email var, bu yüzden sadece email değiştiğinde çalışacak.
 
     return (
-        <div className="container">
+        <div>
             <form className="student-container" onSubmit={handleSubmit}>
                 <h2 className="display-4 title">Student Registration System</h2>
                 <div className="school-title">

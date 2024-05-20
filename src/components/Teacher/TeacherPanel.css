@@ -1,15 +1,15 @@
-body{
+body {
     background-color: blueviolet;
 }
 
-.top-panel{
+.teacher-top-panel {
     background-color: blueviolet;
     border: 2px solid #9563E3;
     border-radius: 18px;
     position: absolute;
     width: 100px;
     height: 50px;
-    margin-left: 0px ;
+    margin-left: 0px;
     right: 20px;
     top: 35px;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; 
@@ -21,15 +21,15 @@ body{
     transition: all ease-in-out 2s;
 }
 
-.top-panel:hover{
+.teacher-top-panel:hover {
     background-color: rgb(11, 235, 59);
 }
 
-.top-panel p{
+.teacher-top-panel p {
     padding: 8px;
 }
 
-.search-bar-container{
+.teacher-search-bar-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@ body{
     margin: 30px auto;
 }
 
-.search-bar-container input{
+.teacher-search-bar-container input {
     background-color: white;
     width: 500px;
     height: 50px;
@@ -47,15 +47,15 @@ body{
     padding: 8px;
 }
 
-.search-bar-container input:hover{
+.teacher-search-bar-container input:hover {
     border: 3px solid rgb(29, 146, 255);
 }
 
-.search-bar-container input:focus {
+.teacher-search-bar-container input:focus {
     border: 3px solid rgb(29, 146, 255);
 }
 
-.navbar{
+.teacher-navbar {
     position: fixed;
     width: 170px;
     height: 100vh;
@@ -65,58 +65,60 @@ body{
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; 
     border: 2px solid #9563E3;
 }
-.User-Name{
+
+.teacher-User-Name {
     color: white;
     align-items: center;
 }
 
-.User-Name p{
+.teacher-User-Name p {
     text-align: center;
     margin: 20px auto;
-
 }
 
-.nav-list{
-    list-style-type: none; /* Remove bullet points */
+.teacher-nav-list {
+    list-style-type: none;
     position: fixed;
-    padding: 0; /* Padding'i sıfırlayın */
+    padding: 0;
     margin: 8px;
     left: 10px;
     top: 50px;
 }
 
-.nav-list li{
-    margin-bottom: 20px; /* Liste öğeleri arasında yatay boşluk */
-    display: flex; /* İçeriği yatay hizala */
+.teacher-nav-list li {
+    margin-bottom: 20px;
+    display: flex;
     align-items: center;
     background-color: #8A2BE2;
 }
 
-.nav-list a{
+.teacher-nav-list a {
     text-decoration: none;
     text-align: center;
     color: white;
     padding: 8px;
 }
 
-.nav-list p{
+.teacher-nav-list p {
     text-decoration: none;
     text-align: center;
     color: white;
     padding: 8px;
 }
-.Icon{
+
+.teacher-Icon {
     display: flex;
     right: 20px;
     align-items: center;
     align-content: center;
     margin: 20px auto;
 }
-.Person-Icon{
+
+.teacher-Person-Icon {
     width: 50px;
     height: 50px;
     background-color: rgba(56, 32, 95, 0.596);
-    border-radius: 50%; /* Doğru kullanım */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +127,8 @@ body{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     margin-bottom: 20px;
 }
-#user-name{
+
+#teacher-user-name {
     text-align: center;
     font-size: 12px;
     position: absolute;
@@ -136,13 +139,14 @@ body{
     margin-bottom: 500px;
 }
 
-.content{
+.teacher-content {
     margin-top: 50px;
 }
-.content li{
+
+.teacher-content li {
     align-items: center;
-    border-bottom: 1px solid black; /* Alt çizgi */
-    padding-bottom: 3px; /* Alt çizgi ile metin arasındaki mesafe */
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
     width: 140px;
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -150,10 +154,11 @@ body{
     padding: 15px;
 }
 
-.content li:hover{
+.teacher-content li:hover {
     background-color: #b778f1;
 }
-.welcome-panel-container{
+
+.teacher-welcome-panel-container {
     width: 1000px;
     height: 200px;
     background-color: blueviolet;
@@ -171,7 +176,7 @@ body{
     margin-top: 135px;
 }
 
-.date-panel{
+.teacher-date-panel {
     color: white;
     font-weight: bold;
     position: absolute;
@@ -181,7 +186,7 @@ body{
     display: flex;
 }
 
-.welcome-message{
+.teacher-welcome-message {
     display: flex;
     flex-direction: column;
     margin: 20px auto;
@@ -192,20 +197,20 @@ body{
     display: flex;
 }
 
-.welcome-back{
+.teacher-welcome-back {
     color: white;
     font-size: 30px;
     font-weight: bolder
 }
 
-.bottom-sentence{
+.teacher-bottom-sentence {
     color: rgb(247, 247, 247,50%);
     font-size: 15px;
     position: absolute;
     margin-top: -20px;
 }
 
-.dashboard-title{
+.teacher-dashboard-title {
     color: white;
     margin-bottom: 10px;
     position: absolute;
@@ -214,7 +219,7 @@ body{
     position: absolute;
 }
 
-.dashboard {
+.teacher-dashboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 18px;
@@ -223,121 +228,98 @@ body{
     margin: 60px 285px;
     padding: 20px;
     position: absolute;
+}
 
-  }
-  
-  .tile {
-    background-color: #f0f0f0; /* Örnek arka plan rengi */
+.teacher-tile {
+    background-color: #f0f0f0;
     padding: 30px;
     border-radius: 5px;
-  }
-  
-  /* Özel döşemeler için ek stiller */
+}
 
-  .classes {
+.teacher-classes {
     background-color: #0099ff;
     width: 310px;
     height: 150px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .grades {
+.teacher-grades {
     background-color: orange;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .notes {
-    background-color: #76b852;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
+.teacher-notes {
+    background-color: rgb(218, 19, 255);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .finance {
-    background-color: burlywood;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  
-    width: 200px;
-    }
+.teacher-finance {
+    background-color: rgb(2, 207, 2);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .payments {
-    background-color: crimson;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
+.teacher-payments {
+    background-color: rgb(255, 30, 30);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .professors {
-    background-color: chartreuse;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
+.teacher-professors {
+    background-color: rgb(3, 252, 143);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .make-it-happen{
-    background-image: url('images/make_it_happen.jpg');
-    background-size: cover; /* Resmi kaplamak için */
-    background-repeat: none;
-    background-position: center;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;  }
-  /* ... diğer döşemeler için benzer stiller ... */
-  
-  .tile img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .tile h3 {
-    margin: 0;
-    font-size: 1.5em;
-  }
-  
-  .progress-bar {
-    height: 20px;
-    background-color: #dddddd;
-    border-radius: 5px;
-  }
-  
-  .progress-bar-inner {
-    height: 100%;
-    background-color: #76b852; /* Örnek dolgu rengi */
-    width: 50%; /* Örnek dolgu yüzdesi */
-    border-radius: 5px;
-  }
+.teacher-announcements {
+    background-color: rgb(255, 215, 0);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-  .notices-container {
-    padding: 20px;
-    background-color: blueviolet;
-    border-radius: 8px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; 
-    height: 400px;
+.teacher-make-it-happen {
+    background-color: rgb(0, 123, 255);
+    width: 310px;
+    height: 150px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.teacher-course-instructors {
+    position: absolute;
+    top: 600px;
+    left: 300px;
     width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.teacher-notices-container {
     position: absolute;
     top: 750px;
     left: 300px;
-    border: 2px solid #9563E3;
-}
-
-.header p {
-    font-size: 24px;
-    color: white;
+    width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
-.notices p {
+.teacher-notices {
+    margin-top: 10px;
+}
+
+.teacher-header {
+    color: #333;
+    font-weight: bold;
     font-size: 18px;
-    color: white;
-}
-
-.notice-item {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.notice-item h3 {
-    margin-bottom: 5px;
-    font-size: 20px;
-    color: white;
-}
-
-.notice-item p {
-    margin: 5px 0;
-}
-
-.notice-item a {
-    color: white;
-    text-decoration: none;
-}
-
-.notice-item a:hover {
-    text-decoration: underline;
 }

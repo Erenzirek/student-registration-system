@@ -24,7 +24,7 @@ function Home() {
                 {/* Akademisyen girişi */}
                 <div className="Container-Box">
                     <PeopleAltIcon fontSize="large"/>
-                    <h1>Academician Login</h1>
+                    <h1> <Link to="/TeacherLogin">Academician Login</Link></h1>
                     <p>
                         Login as an academician to to create courses assignments and track students process.
                     </p>  
