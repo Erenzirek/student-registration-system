@@ -1,7 +1,5 @@
-# Getting Started with Create React App
+#Student Registration System With React JS
 
-Student Registration System
-===============
 ![image](https://github.com/Erenzirek/student-registration-system/assets/61188242/d0208f7f-4854-47cf-9df3-1a7533470e32)
 ![image](https://github.com/Erenzirek/student-registration-system/assets/61188242/2cfc2983-0bdd-42d9-b7b0-37925c447518)
 ![image](https://github.com/Erenzirek/student-registration-system/assets/61188242/8719ad1e-18d7-4f6f-a884-1193bbdf9e0e)
