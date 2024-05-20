@@ -90,7 +90,6 @@ body{
     display: flex; /* İçeriği yatay hizala */
     align-items: center;
     background-color: #8A2BE2;
-   
 }
 
 .nav-list a{
