@@ -1,4 +1,4 @@
-# Student Registration System With React JS
+# Student Registration System With React JS And Node JS
 
 ![image](https://github.com/Erenzirek/student-registration-system/assets/61188242/d0208f7f-4854-47cf-9df3-1a7533470e32)
 ![image](https://github.com/Erenzirek/student-registration-system/assets/61188242/2cfc2983-0bdd-42d9-b7b0-37925c447518)

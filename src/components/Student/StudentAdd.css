@@ -1,0 +1,58 @@
+.Student-Register-Container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto; /* Change height to auto */
+    padding: 25px;
+    margin: 50px auto; /* Reduce margin for better alignment */
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    background-color: #f9f9f9; /* Add background color */
+    border-radius: 10px; /* Add border radius for a rounded appearance */
+  }
+  
+  .Student-Register-Container input {
+    margin-bottom: 15px;
+    border: 2px solid #ddd; /* Change border color to a lighter shade */
+    border-radius: 5px; /* Add border radius */
+    padding: 10px; /* Add padding for better spacing */
+    width: 100%; /* Set input width to 100% */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+  }
+ .submit-button{
+  display: flex;
+  justify-content: center;
+ }
+ .submit-button button{
+  width: 80px;
+  padding: 8px;
+  background-color: blueviolet;
+  border-radius: 8px;
+  transition: all ease-in-out 1s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+ }
+ .submit-button button:hover{
+  background-color: yellowgreen;
+ }
+
+
+  .Student-Register-Container p {
+    color: red; /* Change error message color to red */
+  }
+
+  .Student-Register-Container h1 {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+  
+  
+  .Student-Register-Container a {
+    text-decoration: none; /* Remove underline from link */
+    color: #007bff; /* Change link color */
+    margin-top: 20px; /* Add margin-top for better spacing */
+  }
+  
+  .Student-Register-Container a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+

@@ -8,7 +8,7 @@ import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { useState } from "react";
 import { useEffect } from "react";
-import "TeacherPanel.css"
+import "./TeacherPanel.css"
 
 function TeacherPanel() {
     const [notices, setNotices] = useState([]);
@@ -45,15 +45,15 @@ function TeacherPanel() {
                     {/* <!-- İçerik ve simgeler buraya eklenebilir --> */}
                 </div>
                 <div className="teacher-tile teacher-grades">
-                    <h3>Grades</h3>
+                    <h3>Students</h3>
                     {/* <!-- İçerik ve simgeler buraya eklenebilir --> */}
                 </div>
                 <div className="teacher-tile teacher-notes">
-                    <h3>Notes</h3>
+                    <h3>Assignments</h3>
                     {/* <!-- İçerik ve simgeler buraya eklenebilir --> */}
                 </div>
                 <div className="teacher-tile teacher-finance">
-                    <h3>Finance</h3>
+                    <h3>Time Table</h3>
                     {/* <!-- İçerik ve simgeler buraya eklenebilir --> */}
                 </div>
                 <div className="teacher-tile teacher-payments">
@@ -91,19 +91,6 @@ function TeacherPanel() {
                 </div>
                 <div>
                     <p>Eren</p>
-                </div>
-            </div>
-            
-            <div className="teacher-course-instructors">
-                {/* Content for course instructors */}
-            </div>
-
-            <div className="teacher-notices-container">
-                <div className="teacher-header">
-                    <p>Notices</p>
-                </div>
-                <div className="teacher-notices">
-                    {/* Notices content */}
                 </div>
             </div>
             </>
