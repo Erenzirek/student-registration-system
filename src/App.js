@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
-import StudentLogin from './components/Student/StudentLogin';
 import StudentList from './components/Student/student_list'; // Corrected the component name
 import TeacherLogin from './components/Teacher/teacherLogin';
 import EditStudent from './components/Student/EditStudent';
@@ -10,6 +9,9 @@ import TeacherList from './components/Teacher/TeacherList'; // Ensure this match
 import TeacherSignin from './components/Teacher/teacherSignin';
 import TeacherPanel from './components/Teacher/TeacherPanel';
 import StudentAdd from './components/Student/StudentAdd';
+import CourseAdd from './components/Student/CourseAdd';
+import Classes from './components/Student/classes';
+
 
 import "./App.css";
 
@@ -21,7 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/StudentAdd' element={<StudentAdd />} />
-          <Route path='/StudentLogin' element={<StudentLogin />} />
+          <Route path='/CourseAdd' element={<CourseAdd />} />
           <Route path='/StudentPanel' element={<StudentPanel />} />
           <Route path='/EditStudent' element={<EditStudent />} />
           <Route path='/StudentList' element={<StudentList />} /> {/* Corrected the path */}
@@ -29,6 +31,7 @@ function App() {
           <Route path='/TeacherSignin' element={<TeacherSignin />} />
           <Route path='/TeacherList' element={<TeacherList />} /> {/* Corrected the path */}
           <Route path='/TeacherPanel' element={<TeacherPanel />} /> {/* Corrected the path */}
+          <Route path='/Classes' element={<Classes/>} /> {/* Corrected the path */}
 
         </Routes>
       </BrowserRouter>

@@ -92,9 +92,9 @@ const Add = () => {
         {emailError && <p style={{ color: 'red' }}>This email is already in use.</p>} {/* Display email error if email already exists. */}
         <input
           type="number"
-          placeholder="Student ID"
-          name="student_id"
-          value={student.student_id}
+          placeholder="Password"
+          name="password"
+          value={student.password}
           onChange={handleChange} // Update state on input change.
           required // Make the input required.
         />

@@ -1,17 +1,23 @@
 // Students.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import "./student_list.css";
-import Login from "./StudentLogin";
+import { GiConsoleController } from "react-icons/gi";
 
 const Students = () => {
   const [students, setStudents] = useState([]);
   const [email,setEmail] = useState("");
   const [error, setError] = useState(false);
-  const [emailStudent, setEmailStudent] = useState("");
+  const [emailStudent, setEmailStudent] = useState(""); 
   const [passwordStudent, setPasswordStudent] = useState("");
+  const [index, setIndex] = useState();
+  const [foundStudentId, setFoundStudentId] = useState(null);
+  const [studentNumber, setStudentNumber] = useState("");
 
+  const [login, setLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  
   // console.log(students);
   // console.log(students[0].email);
   useEffect(() => {
@@ -39,11 +45,22 @@ const Students = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Form verilerini kontrol etmek veya işlemek için buraya kod ekleyebilirsiniz.
-    // Örneğin, form verilerini konsola basabilirsiniz.
     console.log("Email:", emailStudent);
     console.log("Password:", passwordStudent);
-    console.log(students[10].email);
+    console.log(students[0].email);
+
+    const findStudentIdByEmail = (email) => {
+      for (let i = 0; i < students.length; i++) {
+        if (students[i].email === email) {
+          return students[i].id;
+        }
+      }
+      return null; // Eğer öğrenci bulunamazsa null döndür
+    };
+
+    const id = findStudentIdByEmail(emailStudent);
+    setFoundStudentId(id);
+    console.log("Found student ID:", id);
 
     // if (emailStudent === students[10].email) {
     //   console.log("true");
@@ -56,17 +73,24 @@ const Students = () => {
     // console.log(students.length);
 
     // const deneme = students.email.includes(emailStudent);
-    // console.log(deneme);
+    console.log("inputs");
+    console.log(students[0].email);  
+    console.log(students[0].password);  
+
     console.log("input");
-    console.log(emailStudent)
+    console.log(emailStudent);
+    console.log(passwordStudent);
     for (let i = 0; i < students.length; i++) {
       // const element = students[i].email;
       // console.log(element);
-      if (emailStudent == students[i].email && passwordStudent == students[i].student_id) {
+      if (emailStudent == students[i].email && passwordStudent == students[i].password) {
+        navigate("/StudentPanel", { state: { email: emailStudent, studentNumber: students[i].studentNumber} });  // Navigate to the StudentPanel component
         console.log("giriş başarılı");
+
         // history.push("/")
         // eğer başarılı ise link to kullan
       }
+    
     }
 
     // let linearSearch = (students,emailStudent) => {
@@ -142,20 +166,24 @@ const Students = () => {
         <table className="students-table">
           <thead>
             <tr>
+              <th>Id</th>
               <th>Name</th>
               <th>Surname</th>
               <th>Email</th>
-              <th>Student ID</th>
+              <th>Password</th>
+              <th>Student Number</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {students.map((student) => (
               <tr key={student.id}>
+                <td>{student.id}</td>
                 <td>{student.name}</td>
                 <td>{student.surname}</td>
                 <td>{student.email}</td>
-                <td>{student.student_id}</td>
+                <td>{student.password}</td>
+                <td>{student.studentNumber}</td>
                 <td>
                   <button className="delete" onClick={() => handleDelete(student.id)}>
                     Delete
@@ -176,7 +204,10 @@ const Students = () => {
             Add new student
           </Link>
         </button>
-      </div>
+    </div>
+    loggedIn & <div>
+      <Link to="/StudentPanel"/>
+    </div>
     </>
   );
 };
