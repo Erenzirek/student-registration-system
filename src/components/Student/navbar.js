@@ -18,8 +18,8 @@ function navbar() {
                         </div>
                     </li>
                     <div className="content">
-                        <li><HomeTwoToneIcon /> <a href="#" className="active">Home</a></li>
-                        <li><GradingIcon /><a href="#">Grades</a></li>
+                        <li><HomeTwoToneIcon /> <a href="/StudentPanel" className="active">Home</a></li>
+                        <li><GradingIcon /><a href="/Classes">Grades</a></li>
                         <li><AccessibilityNewIcon /><a href="#">Attendance</a></li>
                         <li><LocalLibraryIcon /><a href="#">Courses</a></li>
                         <li><SettingsIcon /><a href="#">Settings</a></li>

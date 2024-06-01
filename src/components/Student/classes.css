@@ -3,14 +3,15 @@
   flex-direction: column;
   justify-content: center; /* Center the content vertically */
   align-items: center; /* Center the content horizontally */
-  background-color: blueviolet;
+  background-color: rgb(162, 100, 219, 30%);
+  backdrop-filter: blur(10px);
   padding: 20px;
 }
 
 .table {
   width: 100%; /* Ensure the table takes full width of its container */
   max-width: 1200px; /* Set a maximum width for better readability on large screens */
-  background-color: blueviolet;
+  background-color: rgb(255, 230, 0);
   color: white;
   border-collapse: collapse; /* Remove spacing between cells */
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -22,20 +23,28 @@
 }
 
 .table th {
-  background-color: darkviolet;
+  background-color: rgb(162, 100, 219, 30%);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgb(160, 81, 233);
   color: white;
 }
 
 .table tr:nth-child(even) {
-  background-color: rebeccapurple;
+  background-color: rgb(162, 100, 219, 30%);
+  backdrop-filter: blur(10px);
 }
 
 .courses-select-table {
+  cursor: move;
   background-color: blueviolet;
   width: 1000px;
   text-align: center;
   margin: 20px auto;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  position: absolute;
+  margin: 20px auto;
+  right: 90px;
+  top: 0px;
 }
 
 .courses-select-table h2 {
@@ -45,39 +54,86 @@
 
 .classes-enrollment-table {
   flex: 1;
-  margin-bottom: 20px; /* Margin bottom for spacing between sections */
+  margin-bottom: 5px; /* Margin bottom for spacing between sections */
   background-color: blueviolet;
-  padding: 20px;
+  padding: 8px;
   border: 1px solid blueviolet;
   border-radius: 2px;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   color: white;
   width: 80%;
   max-width: 1200px;
-  height: 500px;
+  height: 200px;
   position: absolute;
-  right: 80px;
-  top: 80px;
+  right: 50px;
+  top: 110px;
+  text-align: center;
 }
 
-.classes-enrollment-table h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 25px;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+.title-enrolled{
+ width: 80%;
+ box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+ text-align: center;
+ /* margin: 5px auto; */
+ align-items: center;
+ position: absolute;
+ right: 50px;
+ position: absolute;
+ top: -50px;
+ width: 100%;
+ right: 0px;
+ 
 }
 
 .blueviolet-bg {
   background-color: blueviolet;
 }
 
-.container-content {
+/* .container-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  color: white;
+} */
 
+.container-content {
+  width: 100%;
+  border-collapse: collapse;
 }
+
+.course-select-table-titles th {
+  background-color: blueviolet;
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+}
+
+.course-select-table-titles th,
+.course-table-content td {
+  border: 1px solid rgb(164, 70, 252);
+  padding: 8px;
+  text-align: center;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  color: black;
+  font-weight: bolder;
+}
+
+.course-table-content tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.course-table-content tr:hover {
+  background-color: #ddd;
+}
+
+.classes-button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 
 .course-content {
   background-color: blueviolet;
@@ -85,5 +141,96 @@
   color: white;
   border-radius: 2px;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  margin-right: 20
+  margin-right: 20;
+  position: absolute;
+  top: 500px;
+}
+
+.courses-select-table th {
+  padding: 10px 20px; /* Başlıklara iç boşluk verir */
+  text-align: center; /* Başlıkları yatayda ortalar */
+}
+
+.course-table-content tr{
+  width: 500px;
+}
+
+.add-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  margin: 20px auto;
+  right: 520px;
+  top: 400px;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.add-button:focus {
+  outline: none;
+}
+/* classes.css */
+
+.close-courses-table {
+  position: relative;
+  display: flex;
+  align-items: center; /* Öğeleri dikey olarak hizalar */
+}
+
+.close-courses-table h2 {
+  flex: 1; /* Uzunluğu %100 yapar */
+  text-align: center; /* Metni yatayda ortalar */
+}
+
+.close-courses-table button {
+  margin-left: 10px; /* Kapat butonu ile başlık arasına bir boşluk ekler */
+}
+
+.close-course-button{
+  width: 40px;
+  height: 37px;
+  margin-top: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  background-color: rgb(255, 63, 63);
+  border: 2px solid rgb(255, 63, 63);
+}
+.close-course-button P{
+  color:white;
+  text-align: center;
+}
+
+.courses-classs-values{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 2px solid rgb(162, 100, 219);
+  transition: all ease 1s;
+}
+
+.courses-classs-values:hover{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: rgb(166, 123, 207);
+}
+
+.message {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.message:hover {
+  background-color: rgb(255, 64, 64, 30%);
+  backdrop-filter: blur(10px); /* Arka plana uygulanacak bulanıklık */
+
 }

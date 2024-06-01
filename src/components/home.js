@@ -15,7 +15,7 @@ function Home() {
                 <div className="Container-Box">
                     <SchoolIcon fontSize="large"/>
                     {/* Başlığı bir Link bileşeni ile sarıyoruz */}
-                    <h1> <Link to="/StudentLogin">Student Login</Link> </h1>
+                    <h1> <Link to="/StudentList">Student Login</Link> </h1>
                     <p>
                         Login as a student to explore course materials and assignments.
                     </p>
