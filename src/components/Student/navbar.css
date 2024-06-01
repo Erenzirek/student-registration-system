@@ -1,0 +1,80 @@
+.navbar{
+    position: absolute;
+    width: 170px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: #8A2BE2;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; 
+    border: 2px solid #9563E3;
+}
+.User-Name{
+    color: white;
+    align-items: center;
+}
+
+.User-Name p{
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+.nav-list{
+    list-style-type: none; /* Remove bullet points */
+    position: absolute;
+    padding: 0; /* Padding'i sıfırlayın */
+    margin: 8px;
+    left: 10px;
+    top: 50px;
+}
+
+.nav-list li{
+    margin-bottom: 20px; /* Liste öğeleri arasında yatay boşluk */
+    display: flex; /* İçeriği yatay hizala */
+    align-items: center;
+    background-color: #8A2BE2;
+}
+
+.nav-list a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
+
+.nav-list p{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
+.Icon{
+    display: flex;
+    right: 20px;
+    align-items: center;
+    align-content: center;
+    margin: 20px auto;
+}
+.Person-Icon{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(56, 32, 95, 0.596);
+    border-radius: 50%; /* Doğru kullanım */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    margin-bottom: 20px;
+}
+#user-name{
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 100px;
+    color: white;
+    margin-bottom: 500px;
+}

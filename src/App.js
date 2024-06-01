@@ -11,6 +11,7 @@ import TeacherPanel from './components/Teacher/TeacherPanel';
 import StudentAdd from './components/Student/StudentAdd';
 import CourseAdd from './components/Student/CourseAdd';
 import Classes from './components/Student/classes';
+import Navbar from './components/Student/navbar';
 
 
 import "./App.css";
@@ -22,6 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/navbar' element={<Navbar/>} />
           <Route path='/StudentAdd' element={<StudentAdd />} />
           <Route path='/CourseAdd' element={<CourseAdd />} />
           <Route path='/StudentPanel' element={<StudentPanel />} />

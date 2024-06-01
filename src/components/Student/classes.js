@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import './classes.css'; // Özel CSS dosyasını ekliyoruz
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS dosyasını ekliyoruz
-
+import Navbar from './navbar';
 function Classes() {
   const location = useLocation();
   const [studentId, setStudentId] = useState(null);
@@ -84,23 +84,40 @@ function Classes() {
   }, [studentId]);
 
   return (
+    <>
+    <div>
+    <Navbar/>
+
+    </div>
     <div className='container-classes-tables'>
-      <div className='classes-enrollment-table'>
-        <h2>Your Enrolled Courses</h2>
-        <div className='container-content'>
+    <div className='classes-enrollment-table'>
+      <h2>Your Enrolled Courses</h2>
+      <table className='classes-enrollment-table'>
+        <thead>
+          <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
           {coursesList.map((course) => (
-            <div className='course-content card' key={course.CourseID}>
-              <div className="card-body">
-                <h3 className="card-title">{course.courseName}</h3>
-                <p className="card-text">{course.description}</p>
-              </div>
-            </div>
+            <tr key={course.courseID}>
+              <td className='course-id'>{course.courseID}</td>
+              <td className='course-name'>{course.courseName}</td>
+              <td className='course-description'>{course.description}</td>
+              <td>
+              <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.courseID)}>Delete</button>
+              </td>
+            </tr>
           ))}
-        </div>
-      </div>
+        </tbody>
+      </table>
+    </div>
+  </div>
       <div className='courses-select-table'>
         <h2>Courses</h2>
-        <table className="table">
+        <table className="container-content">
           <thead>
             <tr>
               <th>Course ID</th>
@@ -119,7 +136,7 @@ function Classes() {
                   <button className="classes-button btn btn-success" onClick={() => handleClick(course.CourseName, course.CourseID)}>
                     Add
                   </button>
-                  <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.CourseID)}>Delete</button>
+                  {/* <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.CourseID)}>Delete</button> */}
                 </td>
               </tr>
             ))}
@@ -127,7 +144,7 @@ function Classes() {
         </table>
         {message && <p>{message}</p>}
       </div>
-    </div>
+    </>
   );
 }
 
