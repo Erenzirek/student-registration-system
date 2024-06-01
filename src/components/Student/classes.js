@@ -1,94 +1,134 @@
+// Classes.js
+
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import './classes.css'; // Özel CSS dosyasını ekliyoruz
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS dosyasını ekliyoruz
 
 function Classes() {
-    const location = useLocation();
-    const [s_id, setS_id] = useState(location.state ? location.state.id : null);
-    const [coursesList, setCoursesList] = useState([]);
-    const [selectedCourse, setSelectedCourse] = useState('');
-    const [message, setMessage] = useState('');
-    const [courses, setCourses] = useState([]);
+  const location = useLocation();
+  const [studentId, setStudentId] = useState(null);
+  const [coursesList, setCoursesList] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [message, setMessage] = useState('');
 
-    const fetchCourses = async () => {
-        try {
-            const res = await axios.get(`http://localhost:8800/enrollments/${s_id}`);
-            setCoursesList(res.data);
-        } catch (err) {
-            console.error("Failed to fetch courses:", err);
-        }
-    };
+  useEffect(() => {
+    if (location.state && location.state.id) {
+      setStudentId(location.state.id);
+    }
+  }, [location.state]);
 
-    const fetchAllCourses = async () => {
-        try {
-            const res = await axios.get(`http://localhost:8800/courses`);
-            setCourses(res.data);
-        } catch (err) {
-            console.error("Failed to fetch courses:", err);
-        }
-    };
+  const fetchCourses = async () => {
+    try {
+      const res = await axios.get(`http://localhost:8800/enrollments/${studentId}`);
+      setCoursesList(res.data);
+    } catch (err) {
+      console.error("Failed to fetch courses:", err);
+    }
+  };
 
-    const enrollStudent = async (studentId, courseID, enrollment_date) => {
-        try {
-            const response = await axios.post(`http://localhost:8800/enrollments/${s_id}`, {
-                s_id,
-                courseID,
-                enrollment_date,
-            });
+  const fetchAllCourses = async () => {
+    try {
+      const res = await axios.get(`http://localhost:8800/courses`);
+      setCourses(res.data);
+    } catch (err) {
+      console.error("Failed to fetch courses:", err);
+    }
+  };
 
-            if (response.status === 200) {
-                setMessage('Enrollment successful.');
-                fetchCourses();
-            }
-        } catch (error) {
-            console.error('Enrollment failed:', error);
-            setMessage('Enrollment failed.');
-        }
-    };
+  const enrollToCourse = async (courseID) => {
+    try {
+      const enrollment_date = new Date().toISOString().slice(0, 10);
+      await axios.post(`http://localhost:8800/enrollments/${studentId}`, {
+        studentId,
+        courseID,
+        enrollment_date,
+      });
+      setMessage('Enrollment successful.');
+      fetchCourses();
+    } catch (error) {
+      console.error('Enrollment failed:', error);
+      setMessage('Enrollment failed.');
+    }
+  };
 
-    const enrollToCourse = (courseID) => {
-        const enrollment_date = new Date().toISOString().slice(0, 10);
-        enrollStudent(s_id, courseID, enrollment_date);
-    };
+  const deleteToCourse = async (courseID) => {
+    try {
+      await axios.delete(`http://localhost:8800/enrollments/${courseID}`, {
+        data: { courseID, studentId }
+      });
+      setMessage('Enrollment deleted successfully.');
+      fetchCourses();
+    } catch (error) {
+      console.error('Enrollment deletion failed:', error);
+      setMessage('Enrollment deletion failed.');
+    }
+  };
 
-    const handleClick = (courseID) => {
-        console.log("hello");
-        setS_id(courseID); // Kullanıcının seçtiği kursun kimliğini s_id'ye ata
-        enrollToCourse(courseID);
-    };
+  const handleClick = (courseName, courseID) => {
+    if (coursesList.some((course) => course.courseID === courseID)) {
+      console.log('Course is already taken');
+    } else {
+      enrollToCourse(courseID);
+    }
+  };
 
-    useEffect(() => {
-        fetchCourses();
-        fetchAllCourses();
-    }, [s_id]);
+  const handleDelete = (courseID) => {
+    deleteToCourse(courseID);
+  };
 
-    return (
-        <>
-            <div>
-                <h2>Your Enrolled Courses</h2>
-                <ul>
-                    {coursesList.map(course => (
-                        <li key={course.CourseID}>
-                            <h3>{course.courseName}</h3>
-                            <p>{course.description}</p>
-                        </li>
-                    ))}
-                </ul>
+  useEffect(() => {
+    fetchCourses();
+    fetchAllCourses();
+  }, [studentId]);
+
+  return (
+    <div className='container-classes-tables'>
+      <div className='classes-enrollment-table'>
+        <h2>Your Enrolled Courses</h2>
+        <div className='container-content'>
+          {coursesList.map((course) => (
+            <div className='course-content card' key={course.CourseID}>
+              <div className="card-body">
+                <h3 className="card-title">{course.courseName}</h3>
+                <p className="card-text">{course.description}</p>
+              </div>
             </div>
-
-            <h2>Courses</h2>
-            <ul>
-                {courses.map(course => (
-                    <li key={course.CourseID}>
-                        <strong>{course.CourseID}</strong> - <strong>{course.CourseName}</strong> - {course.Description}
-                        <button onClick={() => handleClick(course.CourseID)}>Add</button>
-                    </li>
-                ))}
-            </ul>
-
-            {message && <p>{message}</p>}
-        </>
-    );
+          ))}
+        </div>
+      </div>
+      <div className='courses-select-table'>
+        <h2>Courses</h2>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Course ID</th>
+              <th>Course Name</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {courses.map((course) => (
+              <tr key={course.CourseID}>
+                <td>{course.CourseID}</td>
+                <td>{course.CourseName}</td>
+                <td>{course.Description}</td>
+                <td>
+                  <button className="classes-button btn btn-success" onClick={() => handleClick(course.CourseName, course.CourseID)}>
+                    Add
+                  </button>
+                  <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.CourseID)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {message && <p>{message}</p>}
+      </div>
+    </div>
+  );
 }
 
 export default Classes;

@@ -21,7 +21,7 @@ function StudentPanel() {
     const navigate = useNavigate(); 
     const [foundId, setFoundId] = useState(null);
     const [foundStudentId, setFoundStudentId] = useState(null);
-
+    
     useEffect(() => {
         const fetchAllStudents = async () => {
             try {
