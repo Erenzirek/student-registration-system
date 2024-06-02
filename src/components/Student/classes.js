@@ -4,6 +4,8 @@ import axios from 'axios';
 import './classes.css'; // Özel CSS dosyasını ekliyoruz
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS dosyasını ekliyoruz
 import Navbar from './navbar';
+import { CloseButton } from 'react-bootstrap';
+
 
 function Classes() {
   const location = useLocation();
@@ -12,7 +14,8 @@ function Classes() {
   const [courses, setCourses] = useState([]);
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false); // Yeni eklendi
-
+  const { email, studentNumber } = location.state || {};
+  const [animateOut, setAnimateOut] = useState(false);
   useEffect(() => {
     if (location.state && location.state.id) {
       setStudentId(location.state.id);
@@ -82,6 +85,16 @@ function Classes() {
     fetchCourses();
     fetchAllCourses();
   }, [studentId]);
+  
+  // useEffect(() => {
+  //   if (message) {
+  //     const timer = setTimeout(() => {
+  //       setMessage('');
+  //     }, 2000);
+  
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [message]);
 
   // "Add" butonuna tıklandığında tablonun görünür olmasını sağlayan fonksiyon
   const handleClickAddButton = () => {
@@ -103,75 +116,83 @@ function Classes() {
       <div>
         <Navbar/>
       </div>
-      <div className='container-classes-tables'>  
-        <table className='classes-enrollment-table'>
-          <thead>
-            <tr>
-              <h2 className='title-enrolled'>Your Enrolled Courses</h2>
-            </tr>
-            <tr>
-              <th>Course ID</th>
-              <th>Course Name</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {coursesList.map((course) => (
-              <tr className = "courses-classs-values"key={course.courseID}>
-                <td className='course-id'>{course.courseID}</td>
-                <td className='course-name'>{course.courseName}</td>
-                <td className='course-description'>{course.description}</td>
-                <td>
-                  <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.courseID)}>Delete</button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-          <tr> 
-      {/* "Add" butonu */}
-      <button className="add-button" onClick={handleClickAddButton}>
-        Add Course
-      </button> </tr>
-      
-        </table>
-       
-      </div>
-
-
-      {/* Tablo */}
-      {isVisible && (
-        <div className='courses-select-table'>
-          <div className='close-courses-table'>
-              <h2>Courses</h2>
-              <button className = 'close-course-button' onClick={handleClickCloseButton}><p>X</p></button>
-          </div>
-         
-          <table className="container-content">
-            <thead className='course-select-table-titles'>
-              <tr>
-                <th>Course ID</th>
-                <th>Course Name</th>
-                <th>Description</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody className='course-table-content'>
-              {courses.map((course) => (
-                <tr key={course.CourseID}>
-                  <td>{course.CourseID}</td>
-                  <td>{course.CourseName}</td>
-                  <td>{course.Description}</td>
-                  <td>
-                    <button className="classes-button btn btn-success" onClick={() => handleClick(course.CourseName, course.CourseID)}>
-                      Add
-                    </button>
-                  </td>
+      <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4"><h2>Your Enrolled Courses</h2></th>
                 </tr>
-              ))}
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {coursesList.map((course) => (
+                    <tr className="courses-classs-values" key={course.courseID}>
+                        <td className="course-id">{course.courseID}</td>
+                        <td className="course-name">{course.courseName}</td>
+                        <td className="course-description">{course.description}</td>
+                        <td>
+                            <button className="classes-button btn btn-danger" onClick={() => handleDelete(course.courseID)}>Delete</button>
+                        </td>
+                    </tr>
+                ))}
             </tbody>
-          </table>
-          {message && <p className='message'>{message}</p>}
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <button className="add-button" onClick={handleClickAddButton}>Add Course</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    {isVisible && (
+      <div className='blur'>
+        <div class="isVisibleContainer">
+            <div>
+                <h2>Courses</h2>
+                <button className="CloseButton" onClick={handleClickCloseButton}><p>X</p></button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course ID</th>
+                        <th>Course Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {courses.map((course) => (
+                        <tr key={course.CourseID}>
+                            <td>{course.CourseID}</td>
+                            <td>{course.CourseName}</td>
+                            <td>{course.Description}</td>
+                            <td>
+                                <button onClick={() => handleClick(course.CourseName, course.CourseID)}>
+                                    Add
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            
+            {message && (
+              <div className='message-container'>
+                <p className='message'>{message}</p>
+                <button className='ok-button' onClick={() => setMessage('')}>
+                  Ok
+                </button>
+              </div>
+            )}
         </div>
+    </div>
       )}
     </>
   );
